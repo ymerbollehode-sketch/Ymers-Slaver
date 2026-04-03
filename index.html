@@ -8,70 +8,30 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0a0a0f; /* mørk bakgrunn */
-      color: #e0e0e0; /* lys grå tekst */
+      background: #000000; /* helt svart */
+      color: #ffffff;       /* lys tekst */
       text-align: center;
     }
 
-    header {
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #3a3f58, #4f5680); /* mørkere gradient */
+    header, section, footer {
+      background: #000000;  /* alt svart */
+      padding: 50px 20px;
     }
 
     h1 {
       font-size: 3em;
       margin-bottom: 10px;
-      color: #ffffff;
     }
 
-    p {
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    p, li, a {
       font-size: 1.2em;
-      color: #c0c0c0;
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 30px;
-      background: #1f1f2e; /* mørkere knapp */
-      color: #7289da; /* aksentfarge */
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: 0.2s;
-    }
-
-    .btn:hover {
-      background: #2c2c40;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    }
-
-    section {
-      padding: 50px 20px;
-    }
-
-    .box {
-      max-width: 600px;
-      margin: auto;
-      background: #12121c; /* subtil boks bakgrunn */
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    }
-
-    .button-row {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    footer {
-      padding: 20px;
-      background: #05050a;
-      font-size: 0.9em;
-      color: #777;
+      color: #ffffff;  /* lys tekst */
+      text-decoration: none; /* ingen farge på lenker */
     }
 
     ul {
@@ -81,17 +41,40 @@
 
     li {
       margin: 10px 0;
-      font-size: 1.2em;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    a.btn {
+      padding: 15px 30px;
+      border: 2px solid #ffffff; /* enkel hvit ramme */
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.2s;
+      color: #ffffff;
+    }
+
+    a.btn:hover {
+      background: #ffffff;
+      color: #000000;
     }
 
     @media (max-width: 600px) {
       h1 {
         font-size: 2em;
       }
-      p {
+      h2 {
+        font-size: 1.5em;
+      }
+      p, li, a.btn {
         font-size: 1em;
       }
-      .btn {
+      a.btn {
         padding: 12px 20px;
       }
     }
@@ -102,26 +85,22 @@
 <header>
   <h1>Ymers Slaver</h1>
   <p>Dette er den offisielle nettsiden til Ymers Slaver</p>
-  <a class="btn" href="https://discord.gg/6Qm7d9YYQu" target="_blank">Trykk her for å bli medlem!</a>
+  <a class="btn" href="https://discord.gg/6Qm7d9YYQu" target="_blank">Bli medlem</a>
 </header>
 
 <section>
-  <div class="box">
-    <h2>Hva som skjer på serveren vår</h2>
-    <ul>
-      <li>🎮 Gaming</li>
-      <li>💬 Chatting</li>
-      <li>🎉 Events</li>
-      <li>👥 Nye Folk</li>
-    </ul>
-  </div>
+  <h2>Hva som skjer på serveren vår</h2>
+  <ul>
+    <li>🎮 Gaming</li>
+    <li>💬 Chatting</li>
+    <li>🎉 Events</li>
+    <li>👥 Nye Folk</li>
+  </ul>
 </section>
 
-<section>
-  <div class="box button-row">
-    <a class="btn" href="members.html">Medlemmer</a>
-    <a class="btn" href="rules.html">Se regler</a>
-  </div>
+<section class="button-row">
+  <a class="btn" href="members.html">Medlemmer</a>
+  <a class="btn" href="rules.html">Se regler</a>
 </section>
 
 <footer>
