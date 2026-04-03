@@ -9,13 +9,17 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #000000; /* helt svart */
-      color: #ffffff;       /* lys tekst */
+      background: url("bg.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
       text-align: center;
     }
 
+    /* --- Frosted glass + overlay --- */
     header, section, footer {
-      background: #000000; /* alt svart */
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       padding: 50px 20px;
     }
 
@@ -55,7 +59,7 @@
     }
 
     a.btn {
-      padding: 10px 20px; /* mindre knapper */
+      padding: 10px 20px;
       border: 2px solid #ffffff;
       border-radius: 6px;
       font-weight: bold;
