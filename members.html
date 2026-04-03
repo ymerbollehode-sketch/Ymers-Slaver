@@ -25,23 +25,23 @@
       margin-bottom: 30px;
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(14, 1fr); /* 14 kolonner */
+    .member-list {
+      display: flex;
+      overflow-x: auto; /* gjør listen scrollbar horisontalt */
       gap: 10px;
-      max-width: 1400px; /* Juster etter behov */
-      justify-items: center;
+      padding: 10px 0;
+      max-width: 100%;
+      justify-content: center;
     }
 
-    li {
+    .member-list li {
       background: #1f2937;
-      padding: 10px;
+      padding: 10px 15px;
       border-radius: 8px;
-      min-width: 100px; /* sørger for plass til brukernavn */
+      min-width: 120px;
       text-align: center;
+      white-space: nowrap; /* hindrer brukernavnet fra å brytes */
+      flex-shrink: 0; /* hindrer at elementene krymper */
     }
 
     a.btn {
@@ -59,19 +59,13 @@
     a.btn:hover {
       background: #ddd;
     }
-
-    @media (max-width: 1200px) {
-      ul {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      }
-    }
   </style>
 </head>
 <body>
   <h1>Medlemmer – YMERS SLAVER</h1>
   <h2>Du er nødt til å være Level 2 på Overall XP i denne serveren</h2>
 
-  <ul>
+  <ul class="member-list">
     <li>@alflun</li>
     <li>@gymgrosist_f1</li>
     <li>@.how_did_i_get_here</li>
