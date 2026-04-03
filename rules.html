@@ -5,14 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Offisielt Regelverk – YMERS SLAVER</title>
 <style>
+  /* Fullskjerm blur-bakgrunn */
   body {
-    font-family: Arial, sans-serif;
-    background: #000000; /* helt svart */
-    color: #ffffff;      /* hvit tekst */
     margin: 0;
-    padding: 50px 20px;
-    line-height: 1.6em;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
     text-align: center;
+    min-height: 100vh;
+    position: relative;
+    line-height: 1.6em;
+  }
+
+  .bg-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("bg.jpg.JPG") no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(12px); /* sterk blur */
+    z-index: -1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   h1 {
@@ -39,11 +60,12 @@
   }
 
   li {
-    background: #0a0a0a; /* mørk boks for å fremheve listen */
+    background: rgba(0,0,0,0.25); /* lett transparent boks */
     padding: 10px 15px;
     border-radius: 6px;
     margin-bottom: 8px;
     text-align: left;
+    backdrop-filter: blur(4px); /* ekstra glass-effekt */
   }
 
   a.btn {
@@ -51,7 +73,7 @@
     margin-top: 30px;
     padding: 10px 20px;
     color: #ffffff;
-    border: 2px solid #ffffff; /* minimalistisk knapp */
+    border: 2px solid #ffffff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 6px;
@@ -70,6 +92,7 @@
     color: #aaa;
   }
 
+  /* Responsivt */
   @media (max-width: 600px) {
     h1 { font-size: 2em; }
     h2 { font-size: 1.5em; }
@@ -81,84 +104,90 @@
 </head>
 <body>
 
-<h1>YMERS SLAVER – Offisielt Regelverk</h1>
-<p>Velkommen til YMERS SLAVER!<br>
-For å sikre et trygt, inkluderende og hyggelig fellesskap gjelder følgende regler for alle medlemmer.<br>
-Ved å være på denne serveren godtar du å følge både serverens regler og gjeldende lover.</p>
+<!-- Blur bakgrunn -->
+<div class="bg-blur"></div>
 
-<h2>Respekt og oppførsel</h2>
-<ul>
-  <li>Behandle alle medlemmer med respekt – ingen mobbing, trakassering, hat eller baksnakking.</li>
-  <li>Diskriminering (rasisme, sexisme, homofobi, transfobi, funksjonshets osv.) er strengt forbudt.</li>
-  <li>Ingen trusler, oppfordringer til vold eller selvskading.</li>
-  <li>Diskuter saklig – personangrep er ikke akseptert.</li>
-</ul>
+<!-- Innhold over blur -->
+<div class="content">
+  <h1>YMERS SLAVER – Offisielt Regelverk</h1>
+  <p>Velkommen til YMERS SLAVER!<br>
+  For å sikre et trygt, inkluderende og hyggelig fellesskap gjelder følgende regler for alle medlemmer.<br>
+  Ved å være på denne serveren godtar du å følge både serverens regler og gjeldende lover.</p>
 
-<h2>Innhold og kommunikasjon</h2>
-<ul>
-  <li>NSFW (seksuelt, voldelig eller annet upassende innhold) er forbudt.</li>
-  <li>Alt innhold skal være i tråd med norsk lov – ingen piratkopiert materiale, hacking, svindel eller ulovlig innhold.</li>
-  <li>Ingen spredning av hatpropaganda eller ulovlig diskriminerende ytringer.</li>
-  <li>Ikke del personopplysninger uten samtykke (GDPR gjelder).</li>
-  <li>Spam, capslock-spamming, overbruk av emojier eller tagging er ikke lov.</li>
-  <li>Del innhold i riktige kanaler.</li>
-</ul>
+  <h2>Respekt og oppførsel</h2>
+  <ul>
+    <li>Behandle alle medlemmer med respekt – ingen mobbing, trakassering, hat eller baksnakking.</li>
+    <li>Diskriminering (rasisme, sexisme, homofobi, transfobi, funksjonshets osv.) er strengt forbudt.</li>
+    <li>Ingen trusler, oppfordringer til vold eller selvskading.</li>
+    <li>Diskuter saklig – personangrep er ikke akseptert.</li>
+  </ul>
 
-<h2>Brukernavn, profiler og status</h2>
-<ul>
-  <li>Brukernavn og kallenavn skal være lesbare og passende.</li>
-  <li>Profilbilder og statuser må ikke inneholde støtende, NSFW eller misledende innhold.</li>
-  <li>Etterligning av andre brukere eller staff er forbudt.</li>
-</ul>
+  <h2>Innhold og kommunikasjon</h2>
+  <ul>
+    <li>NSFW (seksuelt, voldelig eller annet upassende innhold) er forbudt.</li>
+    <li>Alt innhold skal være i tråd med norsk lov – ingen piratkopiert materiale, hacking, svindel eller ulovlig innhold.</li>
+    <li>Ingen spredning av hatpropaganda eller ulovlig diskriminerende ytringer.</li>
+    <li>Ikke del personopplysninger uten samtykke (GDPR gjelder).</li>
+    <li>Spam, capslock-spamming, overbruk av emojier eller tagging er ikke lov.</li>
+    <li>Del innhold i riktige kanaler.</li>
+  </ul>
 
-<h2>Reklame og selvpromotering</h2>
-<ul>
-  <li>Reklame for andre Discord-servere, sosiale medier, streaming eller tjenester er ikke lov uten skriftlig godkjenning fra staff.</li>
-  <li>Deling av phishing-lenker, scam-sider eller virus resulterer i umiddelbar permanent ban.</li>
-</ul>
+  <h2>Brukernavn, profiler og status</h2>
+  <ul>
+    <li>Brukernavn og kallenavn skal være lesbare og passende.</li>
+    <li>Profilbilder og statuser må ikke inneholde støtende, NSFW eller misledende innhold.</li>
+    <li>Etterligning av andre brukere eller staff er forbudt.</li>
+  </ul>
 
-<h2>Stemmekanaler (VC)</h2>
-<ul>
-  <li>Ikke spill høy musikk, overdøvende støy eller bruk voice-mods uten tillatelse.</li>
-  <li>Respekter pågående samtaler – unngå roping, avbrytelser eller trolling.</li>
-  <li>“AFK”-kanalen er kun for parkering – ikke opphold deg aktivt der.</li>
-</ul>
+  <h2>Reklame og selvpromotering</h2>
+  <ul>
+    <li>Reklame for andre Discord-servere, sosiale medier, streaming eller tjenester er ikke lov uten skriftlig godkjenning fra staff.</li>
+    <li>Deling av phishing-lenker, scam-sider eller virus resulterer i umiddelbar permanent ban.</li>
+  </ul>
 
-<h2>Aldersgrense og trygghet</h2>
-<ul>
-  <li>Serveren følger Discords vilkår: minimumsalder 14 år.</li>
-  <li>Norske lover for personvern gjelder: ikke del ditt eller andres fulle navn, adresse, telefonnummer, passord eller annen privat informasjon.</li>
-  <li>Doxxing, trusler eller forsøk på å hente ut privat info = umiddelbar ban.</li>
-</ul>
+  <h2>Stemmekanaler (VC)</h2>
+  <ul>
+    <li>Ikke spill høy musikk, overdøvende støy eller bruk voice-mods uten tillatelse.</li>
+    <li>Respekter pågående samtaler – unngå roping, avbrytelser eller trolling.</li>
+    <li>“AFK”-kanalen er kun for parkering – ikke opphold deg aktivt der.</li>
+  </ul>
 
-<h2>Moderering og konsekvenser</h2>
-<ul>
-  <li>Moderatorer og administratorer har siste ord i tvister.</li>
-  <li>Brudd på reglene kan medføre: 🟡 Advarsel, 🔵 Midlertidig mute, 🟠 Kick, 🔴 Permanent ban.</li>
-  <li>Staff kan sanksjonere også for handlinger som ikke er direkte nevnt i reglene, dersom de bryter med serverens ånd, Discords retningslinjer eller norsk lov.</li>
-</ul>
+  <h2>Aldersgrense og trygghet</h2>
+  <ul>
+    <li>Serveren følger Discords vilkår: minimumsalder 14 år.</li>
+    <li>Norske lover for personvern gjelder: ikke del ditt eller andres fulle navn, adresse, telefonnummer, passord eller annen privat informasjon.</li>
+    <li>Doxxing, trusler eller forsøk på å hente ut privat info = umiddelbar ban.</li>
+  </ul>
 
-<h2>Generelt</h2>
-<ul>
-  <li>Serveren følger Discords Community Guidelines, Discord Terms of Service og norske lover. 
-    <br><a href="https://discord.com/terms" target="_blank">Discord Terms</a>, 
-    <a href="https://lovdata.no/" target="_blank">Lovdata</a></li>
-  <li>Bruk sunn fornuft – ikke prøv å “finne smutthull” i reglene.</li>
-  <li>Reglene kan oppdateres, og det er ditt ansvar å holde deg oppdatert.</li>
-</ul>
+  <h2>Moderering og konsekvenser</h2>
+  <ul>
+    <li>Moderatorer og administratorer har siste ord i tvister.</li>
+    <li>Brudd på reglene kan medføre: 🟡 Advarsel, 🔵 Midlertidig mute, 🟠 Kick, 🔴 Permanent ban.</li>
+    <li>Staff kan sanksjonere også for handlinger som ikke er direkte nevnt i reglene, dersom de bryter med serverens ånd, Discords retningslinjer eller norsk lov.</li>
+  </ul>
 
-<p><strong>Kort sagt:</strong><br>
-Ingen mobbing.<br>
-Ingen NSFW.<br>
-Følg norsk lov.<br>
-Følg Discord sine regler.<br>
-Vis respekt og bruk hodet.</p>
+  <h2>Generelt</h2>
+  <ul>
+    <li>Serveren følger Discords Community Guidelines, Discord Terms of Service og norske lover. 
+      <br><a href="https://discord.com/terms" target="_blank">Discord Terms</a>, 
+      <a href="https://lovdata.no/" target="_blank">Lovdata</a></li>
+    <li>Bruk sunn fornuft – ikke prøv å “finne smutthull” i reglene.</li>
+    <li>Reglene kan oppdateres, og det er ditt ansvar å holde deg oppdatert.</li>
+  </ul>
 
-<a class="btn" href="index.html">← Tilbake til forsiden</a>
+  <p><strong>Kort sagt:</strong><br>
+  Ingen mobbing.<br>
+  Ingen NSFW.<br>
+  Følg norsk lov.<br>
+  Følg Discord sine regler.<br>
+  Vis respekt og bruk hodet.</p>
 
-<footer>
-  <p>© 2026 YMERS SLAVER</p>
-</footer>
+  <a class="btn" href="index.html">← Tilbake til forsiden</a>
+
+  <footer>
+    <p>© 2026 YMERS SLAVER</p>
+  </footer>
+</div>
 
 </body>
 </html>
