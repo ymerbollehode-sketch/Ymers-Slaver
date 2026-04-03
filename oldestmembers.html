@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gamleste Medlemmer – YMERS SLAVER</title>
+<style>
+  /* Fullskjerm blur-bakgrunn */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+    background: #000; /* fallback */
+  }
+
+  .bg-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("bg.jpg.JPG") no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(12px);
+    z-index: -1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  li {
+    background: rgba(0,0,0,0.25); /* glass-effekt */
+    backdrop-filter: blur(4px);
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rank {
+    font-weight: bold;
+    color: #ffdd57; /* neon-farge for rank */
+  }
+
+  a.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.2s;
+  }
+
+  a.btn:hover {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    li { font-size: 1em; padding: 10px 15px; }
+    a.btn { padding: 8px 16px; font-size: 1em; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Blur bakgrunn -->
+<div class="bg-blur"></div>
+
+<!-- Innhold over blur -->
+<div class="content">
+  <h1>Gamleste Medlemmer</h1>
+  <h2>Top 10 på serveren</h2>
+
+  <ul>
+    <li><span class="rank">1</span> <span>@Ymer</span></li>
+    <li><span class="rank">2</span> <span>@alflun</span></li>
+    <li><span class="rank">3</span> <span>@gymgrosist_f1</span></li>
+    <li><span class="rank">4</span> <span>@.how_did_i_get_here</span></li>
+    <li><span class="rank">5</span> <span>@anonym_bruker_27</span></li>
+    <li><span class="rank">6</span> <span>@bobern55._39557</span></li>
+    <li><span class="rank">7</span> <span>@fifaplayer222010</span></li>
+    <li><span class="rank">8</span> <span>@mathan_1</span></li>
+    <li><span class="rank">9</span> <span>@wuzz.cxnter</span></li>
+    <li><span class="rank">10</span> <span>@lillobas1_10978</span></li>
+  </ul>
+
+  <a class="btn" href="index.html">← Tilbake til forsiden</a>
+</div>
+
+</body>
+</html>
