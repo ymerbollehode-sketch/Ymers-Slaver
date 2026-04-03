@@ -1,108 +1,108 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ymers Slaver</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ymers Slaver</title>
 
-  <style>
-    /* Fullskjerm bakgrunn */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #ffffff;
-      text-align: center;
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
+<style>
+  /* Fullskjerm bakgrunn */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
 
-    /* Blur overlay som dekker hele bakgrunnen */
-    .bg-blur {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url("bg.jpg.JPG") no-repeat center center fixed;
-      background-size: cover;
-      filter: blur(12px); /* juster blurstyrken her */
-      z-index: -1; /* ligger bak alt innhold */
-    }
+  /* Blur overlay som dekker hele bakgrunnen */
+  .bg-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("bg.jpg.JPG") no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(12px); /* juster blurstyrken her */
+    z-index: -1; /* ligger bak alt innhold */
+  }
 
-    /* Innhold som er skarpt */
-    .content {
-      position: relative;
-      z-index: 1; /* ligger over blur */
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+  /* Innhold som er skarpt */
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
-    h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
 
-    h2 {
-      font-size: 2em;
-      margin-bottom: 40px;
-    }
+  h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
 
-    p, li, a {
-      font-size: 1.2em;
-      color: #ffffff;
-      text-decoration: none;
-    }
+  p, li, a {
+    font-size: 1.2em;
+    color: #ffffff;
+    text-decoration: none;
+  }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 40px;
-    }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+  }
 
-    li {
-      margin: 10px 0;
-    }
+  li {
+    margin: 10px 0;
+  }
 
-    .button-row {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
+  .button-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
 
-    a.btn {
-      padding: 10px 20px;
-      border: 2px solid #ffffff;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: 0.2s;
-      color: #ffffff;
-      font-size: 1em;
-    }
+  a.btn {
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s;
+    color: #ffffff;
+    font-size: 1em;
+  }
 
-    a.btn:hover {
-      background: #ffffff;
-      color: #000000;
-    }
+  a.btn:hover {
+    background: #ffffff;
+    color: #000000;
+  }
 
-    /* Responsivt */
-    @media (max-width: 600px) {
-      h1 { font-size: 2em; }
-      h2 { font-size: 1.5em; }
-      p, li, a.btn { font-size: 1em; }
-      a.btn { padding: 8px 16px; }
-    }
-  </style>
+  /* Responsivt */
+  @media (max-width: 600px) {
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    p, li, a.btn { font-size: 1em; }
+    a.btn { padding: 8px 16px; }
+  }
+</style>
 </head>
 <body>
 
 <!-- Blur-bakgrunn -->
 <div class="bg-blur"></div>
 
-<!-- Innhold som ligger over blur -->
+<!-- Innhold over blur -->
 <div class="content">
   <header>
     <h1>Ymers Slaver</h1>
@@ -121,6 +121,7 @@
     <div class="button-row">
       <a class="btn" href="members.html">Medlemmer</a>
       <a class="btn" href="rules.html">Se regler</a>
+      <a class="btn" href="oldestmembers.html">Gamleste Medlemmer</a>
     </div>
   </section>
 
