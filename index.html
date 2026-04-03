@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ymers Slaver</title>
   <style>
+    /* --- Grunnleggende styling --- */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,52 +15,53 @@
     }
 
     header, section, footer {
-      background: #000000;  /* alt svart */
+      background: #000000; /* alt svart */
       padding: 50px 20px;
     }
 
     h1 {
       font-size: 3em;
-      margin-bottom: 20px; /* litt større mellomrom */
+      margin-bottom: 20px;
     }
 
     h2 {
       font-size: 2em;
-      margin-bottom: 40px; /* mer avstand under overskriften */
+      margin-bottom: 40px;
     }
 
     p, li, a {
       font-size: 1.2em;
-      color: #ffffff;  /* lys tekst */
+      color: #ffffff;
       text-decoration: none;
     }
 
     ul {
       list-style: none;
       padding: 0;
-      margin-bottom: 40px; /* mer avstand under listen */
+      margin-bottom: 40px;
     }
 
     li {
       margin: 10px 0;
     }
 
+    /* --- Knappestil --- */
     .button-row {
       display: flex;
       justify-content: center;
-      gap: 15px; /* litt mindre mellom knappene */
+      gap: 15px;
       flex-wrap: wrap;
-      margin-top: 20px; /* flytt knappene litt ned */
+      margin-top: 20px;
     }
 
     a.btn {
       padding: 10px 20px; /* mindre knapper */
-      border: 2px solid #ffffff; /* enkel hvit ramme */
+      border: 2px solid #ffffff;
       border-radius: 6px;
       font-weight: bold;
       transition: 0.2s;
       color: #ffffff;
-      font-size: 1em; /* litt mindre tekst i knappene */
+      font-size: 1em;
     }
 
     a.btn:hover {
@@ -67,19 +69,12 @@
       color: #000000;
     }
 
+    /* --- Responsive --- */
     @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
-      }
-      h2 {
-        font-size: 1.5em;
-      }
-      p, li, a.btn {
-        font-size: 1em;
-      }
-      a.btn {
-        padding: 8px 16px;
-      }
+      h1 { font-size: 2em; }
+      h2 { font-size: 1.5em; }
+      p, li, a.btn { font-size: 1em; }
+      a.btn { padding: 8px 16px; }
     }
   </style>
 </head>
